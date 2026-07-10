@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Golden Academy</title>
+<title>Golden Academy | Formations Professionnelles</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -12,200 +14,286 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
-font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f5f5;
-color:#333;
+background:#0f0f0f;
+color:white;
 }
 
 header{
-background:#d4af37;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-nav{
-background:#222;
-padding:15px;
-position:sticky;
+position:fixed;
 top:0;
-}
-
-nav ul{
-list-style:none;
+left:0;
+width:100%;
+background:#111;
 display:flex;
-justify-content:center;
-flex-wrap:wrap;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+box-shadow:0 5px 20px rgba(0,0,0,.4);
+z-index:1000;
 }
 
-nav li{
-margin:10px;
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD700;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-font-weight:bold;
+color:white;
+margin-left:20px;
+font-weight:600;
+transition:.3s;
 }
 
 nav a:hover{
-color:#d4af37;
-}
-
-section{
-padding:70px 20px;
-text-align:center;
+color:#FFD700;
 }
 
 .hero{
-background:white;
-padding:80px 20px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4f?auto=format&fit=crop&w=1500&q=80');
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-font-size:45px;
-color:#d4af37;
+font-size:55px;
+color:#FFD700;
 margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
+max-width:700px;
+margin:auto;
 margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-background:#d4af37;
-color:white;
-padding:15px 30px;
+padding:15px 35px;
+background:#FFD700;
+color:#111;
 text-decoration:none;
-border-radius:8px;
-margin:10px;
+border-radius:40px;
 font-weight:bold;
+transition:.3s;
 }
 
 .btn:hover{
-background:#b8942f;
+transform:scale(1.05);
+}
+
+section{
+padding:90px 8%;
+}
+
+h2{
+font-size:38px;
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
 }
 
 .card{
-background:white;
+background:#1c1c1c;
 padding:25px;
-margin:20px auto;
-max-width:900px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+border-radius:15px;
+transition:.3s;
+border:1px solid #333;
 }
 
-footer{
-background:#222;
-color:white;
+.card:hover{
+transform:translateY(-10px);
+border-color:#FFD700;
+}
+
+.price{
+font-size:24px;
+font-weight:bold;
+color:#FFD700;
+margin-top:15px;
+}footer{
+background:#111;
 text-align:center;
-padding:20px;
+padding:30px;
+margin-top:40px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+button{
+padding:15px 35px;
+background:#FFD700;
+color:#111;
+border:none;
+border-radius:30px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.9;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.hero p{
+font-size:16px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>🎓 Golden Academy</h1>
-<p>L'excellence au service de votre réussite.</p>
-</header>
+
+<div class="logo">
+GOLDEN ACADEMY
+</div>
 
 <nav>
-<ul>
-<li><a href="#accueil">Accueil</a></li>
-<li><a href="#apropos">À propos</a></li>
-<li><a href="#formations">Formations</a></li>
-<li><a href="#inscription">Inscription</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<a href="#accueil">Accueil</a>
+<a href="#apropos">À propos</a>
+<a href="#formations">Formations</a>
+<a href="#contact">Contact</a>
+<a href="https://wa.me/237TONNUMERO">WhatsApp</a>
 </nav>
 
-<section id="accueil" class="hero">
+</header>
 
-<h1>Bienvenue à Golden Academy</h1>
+<section class="hero" id="accueil">
+
+<div>
+
+<h1>Bienvenue chez Golden Academy</h1>
 
 <p>
-Nous accompagnons les élèves et étudiants vers la réussite grâce à des formations modernes.
+Développez des compétences qui vous permettront de gagner de l'argent grâce à nos formations professionnelles.
 </p>
 
-<a class="btn" href="#inscription">S'inscrire</a>
+<a href="#formations" class="btn">Découvrir les formations</a>
 
-<a class="btn" href="https://wa.me/237688864284" target="_blank">
-WhatsApp
-</a>
+</div>
 
 </section>
 
 <section id="apropos">
 
-<div class="card">
-
 <h2>À propos</h2>
 
 <p>
-
-Golden Academy est une plateforme de formation qui accompagne les élèves, étudiants et professionnels dans leur réussite grâce à des formations de qualité, un suivi personnalisé et des enseignants expérimentés.
-
+Golden Academy accompagne les étudiants, entrepreneurs et investisseurs grâce à des formations pratiques en Trading, Achat en Chine, Marketing Digital et E-commerce.
 </p>
 
-</div>
+<p>
+Notre objectif est de former une nouvelle génération d'entrepreneurs africains compétents et financièrement indépendants.
+</p>
 
-</section>
-
-<section id="formations">
-
-<div class="card">
+</section><section id="formations">
 
 <h2>Nos Formations</h2>
 
-<p>
-
-✅ Développement Web<br><br>
-
-✅ Informatique Bureautique<br><br>
-
-✅ Marketing Digital<br><br>
-
-✅ Graphisme<br><br>
-
-✅ Accompagnement scolaire<br><br>
-
-✅ Coaching professionnel
-
-</p>
-
-</div>
-
-</section>
-
-<section id="inscription">
+<div class="cards">
 
 <div class="card">
+<h3>📈 Trading Débutant</h3>
+<p>Apprenez les bases du trading de manière simple et pratique.</p>
+<div class="price">2 000 FCFA</div>
+</div>
 
-<h2>Inscription</h2>
+<div class="card">
+<h3>📊 Trading Intermédiaire</h3>
+<p>Maîtrisez les analyses techniques et la gestion du risque.</p>
+<div class="price">3 000 FCFA</div>
+</div>
 
-<p>
+<div class="card">
+<h3>📉 Trading Avancé</h3>
+<p>Développez des stratégies efficaces pour les marchés financiers.</p>
+<div class="price">5 000 FCFA</div>
+</div>
 
-Cliquez sur le bouton ci-dessous pour vous inscrire directement via WhatsApp.
+<div class="card">
+<h3>🏆 Trading Expert</h3>
+<p>Perfectionnez vos compétences avec des techniques professionnelles.</p>
+<div class="price">8 000 FCFA</div>
+</div>
 
-</p>
+<div class="card">
+<h3>💎 Pack Complet</h3>
+<p>Accès à tous les niveaux de la formation Trading.</p>
+<div class="price">15 000 FCFA</div>
+</div>
 
-<br>
+<div class="card">
+<h3>📦 Achat en Chine</h3>
+<p>Apprenez à acheter directement auprès des fournisseurs chinois et à importer vos produits.</p>
+</div>
 
-<a class="btn" href="https://wa.me/237670000000?text=Bonjour%20je%20souhaite%20m'inscrire%20à%20Golden%20Academy." target="_blank">
+<div class="card">
+<h3>📱 Marketing Digital</h3>
+<p>Bientôt disponible.</p>
+</div>
 
-Je m'inscris
-
-</a>
+<div class="card">
+<h3>🛒 E-commerce</h3>
+<p>Bientôt disponible.</p>
+</div>
 
 </div>
 
@@ -213,33 +301,67 @@ Je m'inscris
 
 <section id="contact">
 
-<div class="card">
-
 <h2>Contact</h2>
 
-<p>
+<form>
 
-📱 WhatsApp : +237 670 000 000
+<input type="text" placeholder="Votre nom" required>
 
-</p>
+<input type="email" placeholder="Votre e-mail" required>
 
-<br>
+<textarea rows="5" placeholder="Votre message" required></textarea>
 
-<a class="btn" href="https://wa.me/237688864284" target="_blank">
+<button type="submit">Envoyer</button>
 
-Nous contacter
+</form>
 
-</a>
-
-</div>
-
-</section>
-
-<footer>
+</section><footer>
 
 <p>© 2026 Golden Academy - Tous droits réservés.</p>
 
+<p>
+Former aujourd'hui les entrepreneurs de demain.
+</p>
+
 </footer>
+
+<!-- Bouton WhatsApp flottant -->
+<a href="https://wa.me/237688864284"
+class="whatsapp"
+target="_blank"
+title="Discuter sur WhatsApp">
+💬
+</a>
+
+<script>
+
+// Animation simple au défilement
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+}
+});
+});
+
+cards.forEach(card=>{
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition="0.6s";
+observer.observe(card);
+});
+
+// Confirmation d'envoi du formulaire
+document.querySelector("form").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Merci ! Votre message a été envoyé avec succès.");
+this.reset();
+});
+
+</script>
 
 </body>
     </html>
