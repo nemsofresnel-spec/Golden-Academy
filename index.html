@@ -3,72 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Golden Academy</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Arial,sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f5f5;
+background:#f5f5f5;
+color:#333;
 }
 
 header{
-    background:#d4af37;
-    color:white;
-    padding:20px;
-    text-align:center;
+background:#d4af37;
+color:white;
+text-align:center;
+padding:25px;
 }
 
 nav{
-    background:#222;
-    padding:15px;
-    text-align:center;
+background:#222;
+padding:15px;
+position:sticky;
+top:0;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav li{
+margin:10px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
-.hero{
-    background:#ffffff;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.hero h1{
-    color:#d4af37;
-    font-size:40px;
-}
-
-.hero p{
-    font-size:20px;
-    color:#555;
-}
-
-.btn{
-    display:inline-block;
-    background:#d4af37;
-    color:white;
-    padding:15px 30px;
-    text-decoration:none;
-    border-radius:8px;
-    margin:10px;
+nav a:hover{
+color:#d4af37;
 }
 
 section{
-    padding:40px 20px;
-    text-align:center;
+padding:70px 20px;
+text-align:center;
+}
+
+.hero{
+background:white;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:45px;
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#d4af37;
+color:white;
+padding:15px 30px;
+text-decoration:none;
+border-radius:8px;
+margin:10px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#b8942f;
+}
+
+.card{
+background:white;
+padding:25px;
+margin:20px auto;
+max-width:900px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
 }
+
 </style>
 
 </head>
@@ -76,54 +115,129 @@ footer{
 <body>
 
 <header>
-<h2>🎓 Golden Academy</h2>
-<p>L'excellence au service de votre réussite</p>
+<h1>🎓 Golden Academy</h1>
+<p>L'excellence au service de votre réussite.</p>
 </header>
 
 <nav>
-<a href="#">Accueil</a>
-<a href="#">À propos</a>
-<a href="#">Formations</a>
-<a href="#">Inscription</a>
-<a href="#">Contact</a>
+<ul>
+<li><a href="#accueil">Accueil</a></li>
+<li><a href="#apropos">À propos</a></li>
+<li><a href="#formations">Formations</a></li>
+<li><a href="#inscription">Inscription</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
-<div class="hero">
+<section id="accueil" class="hero">
+
 <h1>Bienvenue à Golden Academy</h1>
 
 <p>
-Une plateforme moderne pour accompagner les étudiants
-vers la réussite académique.
+Nous accompagnons les élèves et étudiants vers la réussite grâce à des formations modernes.
 </p>
 
-<a class="btn" href="#">S'inscrire</a>
+<a class="btn" href="#inscription">S'inscrire</a>
 
-<a class="btn"
-href="https://wa.me/237688864284">
+<a class="btn" href="https://wa.me/237670000000" target="_blank">
 WhatsApp
+</a>
+
+</section>
+
+<section id="apropos">
+
+<div class="card">
+
+<h2>À propos</h2>
+
+<p>
+
+Golden Academy est une plateforme de formation qui accompagne les élèves, étudiants et professionnels dans leur réussite grâce à des formations de qualité, un suivi personnalisé et des enseignants expérimentés.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="formations">
+
+<div class="card">
+
+<h2>Nos Formations</h2>
+
+<p>
+
+✅ Développement Web<br><br>
+
+✅ Informatique Bureautique<br><br>
+
+✅ Marketing Digital<br><br>
+
+✅ Graphisme<br><br>
+
+✅ Accompagnement scolaire<br><br>
+
+✅ Coaching professionnel
+
+</p>
+
+</div>
+
+</section>
+
+<section id="inscription">
+
+<div class="card">
+
+<h2>Inscription</h2>
+
+<p>
+
+Cliquez sur le bouton ci-dessous pour vous inscrire directement via WhatsApp.
+
+</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/237670000000?text=Bonjour%20je%20souhaite%20m'inscrire%20à%20Golden%20Academy." target="_blank">
+
+Je m'inscris
+
 </a>
 
 </div>
 
-<section>
+</section>
 
-<h2>Pourquoi choisir Golden Academy ?</h2>
+<section id="contact">
+
+<div class="card">
+
+<h2>Contact</h2>
 
 <p>
-✔ Des formations de qualité<br><br>
 
-✔ Un suivi personnalisé<br><br>
+📱 WhatsApp : +237 670 000 000
 
-✔ Une plateforme disponible 24h/24<br><br>
-
-✔ Une équipe d'enseignants expérimentés
 </p>
+
+<br>
+
+<a class="btn" href="https://wa.me/237688864284" target="_blank">
+
+Nous contacter
+
+</a>
+
+</div>
 
 </section>
 
 <footer>
 
-© 2026 Golden Academy - Tous droits réservés.
+<p>© 2026 Golden Academy - Tous droits réservés.</p>
 
 </footer>
 
